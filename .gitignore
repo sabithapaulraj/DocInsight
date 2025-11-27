@@ -1,0 +1,18 @@
+# Python venv
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files that shouldn't go to GitHub
+data/raw/
+data/images/
+data/page_images/
+
+# Model / cache dirs if any
+cache/
