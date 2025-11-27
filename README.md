@@ -132,33 +132,46 @@ docinsight/
 ## 🔧 Installation & Setup
 
 ### 1. Clone the repo
+```
 git clone https://github.com/<yourusername>/docinsight.git
 cd docinsight
-
+```
 ### 2. Create a Python virtual environment
+```
 python -m venv .venv
 .\.venv\Scripts\activate   # on Windows
+```
 
-# or on Linux/macOS:
+### or on Linux/macOS:
+```
 source .venv/bin/activate
+```
 
 ### 3. Install dependencies
 
-# If you have a requirements.txt:
+#### If you have a requirements.txt:
+```
 pip install -r requirements.txt
+```
 
-# If not, typical key dependencies include:
+#### If not, typical key dependencies include:
+```
 pip install pymupdf sentence-transformers faiss-cpu transformers pillow camelot-py[cv] pdfplumber
+```
 
 ### 4. Place PDF in the proper location
 
-# create the raw data folder (if not already)
+#### create the raw data folder (if not already)
+```
 mkdir -p data/raw
+```
 
-# Then copy your educational PDF into:
+#### Then copy your educational PDF into:
+```
 data/raw/tables-charts.pdf
+```
 
-# The project expects this filename and path by default.
+#### The project expects this filename and path by default.
 
 ------------------------------------------------------------
 
@@ -170,15 +183,15 @@ data/raw/tables-charts.pdf
 3. 05_chart_extraction.ipynb
 4. 06_demo_and_conclusion.ipynb
 
-# 01 → builds initial text chunks.
-# 04 → adds table chunks and builds the master chunk file.
-# 05 → adds chart/page-image caption chunks.
-# 06 → runs the final demo and qualitative evaluation.
+### 01 → builds initial text chunks.
+### 04 → adds table chunks and builds the master chunk file.
+### 05 → adds chart/page-image caption chunks.
+### 06 → runs the final demo and qualitative evaluation.
 
 ------------------------------------------------------------
 
 ### Example output (from notebook 06)
-
+```
 QUESTION:
 What is the main function of tables, charts and graphs in written communication?
 
@@ -190,6 +203,7 @@ rank  chunk_type  chunk_id  page_number  similarity  text
 1     text         13          2         0.89      "Tables, charts and graphs..."
 2     text         14          2         0.83      "They help present information..."
 ...
+```
 ## 📊 Evaluation Approach
 
 This project focuses on qualitative, output-based evaluation rather than strict numeric accuracy:
